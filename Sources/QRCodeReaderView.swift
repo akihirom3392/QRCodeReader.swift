@@ -159,7 +159,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
           .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
           .first { $0.isKeyWindow }
       } else {
-        window = application.keyWindow
+		window = application.windows.first
       }
       let supportedInterfaceOrientations = application.supportedInterfaceOrientations(for: window)
 
